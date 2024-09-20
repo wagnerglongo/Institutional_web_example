@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa XYZ - Soluções Inovadoras</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+    /* Estilo customizado para a página */
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x600'); /* Substitua pela URL da sua imagem */
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+    }
+
+    .services-section {
+      padding: 50px 0;
+    }
+
+    .team-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Empresa XYZ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Equipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>Bem-vindo à Empresa XYZ</h1>
+      <p>Oferecendo soluções inovadoras para o seu negócio</p>
+      <a href="#services" class="btn btn-primary btn-lg mt-3">Saiba mais</a>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container text-center">
+      <h2>Nossos Serviços</h2>
+      <p class="mb-5">Oferecemos uma variedade de serviços para ajudar sua empresa a crescer.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Consultoria</h5>
+              <p class="card-text">Soluções personalizadas para maximizar o potencial do seu negócio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Desenvolvimento</h5>
+              <p class="card-text">Criação de sistemas modernos e eficientes sob medida para sua empresa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Suporte Técnico</h5>
+              <p class="card-text">Suporte especializado para manter seus sistemas sempre operacionais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="container text-center">
+      <h2>Nossa Equipe</h2>
+      <p class="mb-5">Conheça os profissionais por trás das nossas soluções de sucesso.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://via.placeholder.com/200" alt="Equipe 1" class="rounded-circle mb-3">
+          <h5>Maria Silva</h5>
+          <p>CEO</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://via.placeholder.com/200" alt="Equipe 2" class="rounded-circle mb-3">
+          <h5>João Souza</h5>
+          <p>CTO</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://via.placeholder.com/200" alt="Equipe 3" class="rounded-circle mb-3">
+          <h5>Ana Pereira</h5>
+          <p>COO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="text-center py-5">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p class="mb-5">Tem alguma dúvida ou gostaria de conhecer mais sobre os nossos serviços? Entre em contato conosco!</p>
+      <a href="mailto:contato@empresaxyz.com" class="btn btn-primary btn-lg">Enviar Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2024 Empresa XYZ. Todos os direitos reservados.</p>
+      <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
