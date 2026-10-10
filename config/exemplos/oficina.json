@@ -1,0 +1,38 @@
+{
+  "site": { "url": "https://institutional-web-example.vercel.app", "lang": "pt-BR", "demo": true },
+  "business": {
+    "name": "Garagem Torque",
+    "tagline": "Mecânica e revisão para carros nacionais e importados",
+    "description": "Oficina mecânica com diagnóstico por computador, orçamento por foto no WhatsApp e garantia por escrito em todos os serviços.",
+    "city": "São José do Rio Preto, SP",
+    "address": "Avenida Exemplo, 456, Jardim Modelo",
+    "whatsapp": "(17) 90000-0001",
+    "email": "oficina@exemplo.com.br",
+    "hours": ["Segunda a sexta, 7h30 às 18h", "Sábado, 7h30 às 12h"]
+  },
+  "theme": { "primary": "#1c2b3a", "accent": "#f2542d" },
+  "hero": {
+    "title": "Seu carro de volta no mesmo dia, com garantia por escrito.",
+    "subtitle": "Mande uma foto ou descreva o problema no WhatsApp e receba um orçamento antes de trazer o carro.",
+    "cta": "Pedir orçamento pelo WhatsApp",
+    "facts": [
+      { "value": "90 dias", "label": "de garantia em peças e serviço" },
+      { "value": "1 dia", "label": "para revisões simples" }
+    ]
+  },
+  "services": [
+    { "title": "Revisão completa", "description": "Óleo, filtros, freios, suspensão e checagem de 40 itens com laudo." },
+    { "title": "Diagnóstico eletrônico", "description": "Leitura da central do carro para achar a falha sem trocar peça no chute." },
+    { "title": "Freios e suspensão", "description": "Pastilhas, discos, amortecedores e alinhamento." },
+    { "title": "Ar-condicionado", "description": "Higienização, carga de gás e conserto de vazamentos." }
+  ],
+  "steps": [
+    { "title": "Mande no WhatsApp", "description": "Uma foto do painel ou a descrição do barulho já ajuda." },
+    { "title": "Receba o orçamento", "description": "Valor de peça e mão de obra separados, antes de começar." },
+    { "title": "Retire o carro", "description": "Com nota, laudo do serviço e garantia de 90 dias." }
+  ],
+  "faq": [
+    { "question": "Vocês buscam o carro?", "answer": "Buscamos e levamos em um raio de 10 km, com agendamento." },
+    { "question": "Posso trazer a minha peça?", "answer": "Pode. Nesse caso a garantia cobre só a mão de obra." }
+  ]
+}

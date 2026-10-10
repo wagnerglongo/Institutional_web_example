@@ -1,0 +1,77 @@
+{
+  "site": {
+    "url": "https://institutional-web-example.vercel.app",
+    "lang": "pt-BR",
+    "demo": true
+  },
+  "business": {
+    "name": "Prumo Contabilidade",
+    "tagline": "Contabilidade para pequenas empresas e MEI",
+    "description": "Escritório de contabilidade que cuida da abertura, dos impostos e da folha de pagamento de pequenas empresas, com atendimento direto pelo WhatsApp.",
+    "city": "São José do Rio Preto, SP",
+    "address": "Rua Exemplo, 123, Centro",
+    "whatsapp": "(17) 90000-0000",
+    "email": "contato@exemplo.com.br",
+    "hours": ["Segunda a sexta, 8h às 18h", "Sábado, 8h às 12h"],
+    "founded": 2012
+  },
+  "theme": {
+    "primary": "#1f4d43",
+    "accent": "#e8b04b"
+  },
+  "hero": {
+    "title": "Sua empresa em dia com o fisco, sem você perder o sono.",
+    "subtitle": "Cuidamos da contabilidade de MEIs e pequenas empresas: impostos, folha e abertura de CNPJ. Você fala com um contador de verdade, pelo WhatsApp.",
+    "cta": "Pedir um orçamento",
+    "facts": [
+      { "value": "12", "label": "anos atendendo pequenas empresas" },
+      { "value": "48 h", "label": "para responder qualquer dúvida" },
+      { "value": "100%", "label": "online, sem ir ao escritório" }
+    ]
+  },
+  "services": [
+    {
+      "title": "Abertura de empresa",
+      "description": "Da escolha do tipo de empresa ao CNPJ ativo, com contrato social, inscrições e alvará."
+    },
+    {
+      "title": "Contabilidade mensal",
+      "description": "Apuração de impostos, guias no prazo, balanço e relatórios simples de entender."
+    },
+    {
+      "title": "Folha de pagamento",
+      "description": "Holerites, férias, 13º, eSocial e FGTS Digital para equipes de 1 a 50 pessoas."
+    },
+    {
+      "title": "MEI tranquilo",
+      "description": "DAS em dia, declaração anual e aviso quando o faturamento chegar perto do limite."
+    },
+    {
+      "title": "Planejamento tributário",
+      "description": "Comparamos Simples Nacional, Lucro Presumido e Lucro Real para pagar o mínimo dentro da lei."
+    },
+    {
+      "title": "Troca de contador",
+      "description": "Pegamos a documentação com o escritório anterior e fazemos a transição sem multa."
+    }
+  ],
+  "steps": [
+    { "title": "Conversa inicial", "description": "Você conta como a empresa funciona hoje. Leva uns 20 minutos." },
+    { "title": "Proposta fechada", "description": "Mandamos o valor mensal por escrito, sem taxa escondida." },
+    { "title": "Assumimos tudo", "description": "Cuidamos da documentação e você só aprova as guias no aplicativo do banco." }
+  ],
+  "faq": [
+    {
+      "question": "Vocês atendem empresas de outras cidades?",
+      "answer": "Sim. Todo o atendimento é online, então atendemos qualquer cidade do Brasil."
+    },
+    {
+      "question": "Quanto custa a contabilidade mensal?",
+      "answer": "Depende do regime de tributação e do número de funcionários. Mandamos a proposta depois da conversa inicial, sem compromisso."
+    },
+    {
+      "question": "Consigo trocar de contador no meio do ano?",
+      "answer": "Consegue. Fazemos a transição com o escritório atual e conferimos se ficou alguma pendência."
+    }
+  ]
+}

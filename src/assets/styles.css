@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Institutional Web: tema base
+   As cores --primary e --accent (e os textos sobre elas) vêm da configuração
+   e são injetadas pelo build no <head>.
+   ========================================================================== */
+
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Public Sans"; src: url("fonts/public-sans-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Public Sans"; src: url("fonts/public-sans-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+:root {
+  --primary: #1f4d43;
+  --on-primary: #ffffff;
+  --accent: #e8b04b;
+  --on-accent: #14181f;
+  --ink: #14181f;
+  --muted: #4b5563;
+  --line: #e2e5e9;
+  --paper: #ffffff;
+  --tint: color-mix(in srgb, var(--primary) 6%, white);
+
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 70rem;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --section: clamp(4rem, 9vw, 7rem);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; margin: 0; }
+h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 2.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.45rem; margin-bottom: 0.5rem; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+a { color: var(--primary); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* --- Botões -------------------------------------------------------------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+.button:hover { filter: brightness(0.94); }
+.button--small { min-height: 2.5rem; padding: 0.45rem 1rem; font-size: 0.95rem; }
+.button--outline { background: transparent; border-color: currentColor; color: inherit; }
+
+/* --- Faixa de demonstração e cabeçalho ----------------------------------- */
+.demo-bar { max-width: none; margin: 0; padding: 0.4rem var(--gutter); background: var(--ink); color: #fff; font-size: 0.85rem; text-align: center; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem var(--gutter);
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { margin-right: auto; font: 600 1.4rem var(--serif); color: var(--primary); text-decoration: none; }
+.menu { display: flex; align-items: center; gap: 1.5rem; }
+.menu a:not(.button) { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.menu a:not(.button):hover { color: var(--primary); }
+.menu-toggle { display: none; }
+
+@media (max-width: 52rem) {
+  .menu-toggle {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: none;
+    font: 600 0.95rem var(--sans);
+    cursor: pointer;
+  }
+  .menu { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1rem 0 0.5rem; }
+  .menu.is-open { display: flex; }
+}
+
+/* --- Abertura ------------------------------------------------------------ */
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 9vw, 7rem) var(--gutter) var(--section);
+}
+.hero h1 { max-width: 17ch; font-size: clamp(2.6rem, 6.5vw, 4.6rem); color: var(--primary); letter-spacing: -0.02em; text-wrap: balance; }
+.hero__lead { margin: 1.5rem 0 2rem; font-size: 1.2rem; color: var(--muted); max-width: 52ch; }
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 2rem;
+  margin: clamp(3rem, 7vw, 5rem) 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.facts__item { display: flex; flex-direction: column-reverse; gap: 0.25rem; }
+.facts dd { margin: 0; font: 600 2.6rem/1 var(--serif); color: var(--primary); }
+.facts dt { color: var(--muted); }
+
+/* --- Seções -------------------------------------------------------------- */
+.section { max-width: var(--max); margin: 0 auto; padding: var(--section) var(--gutter); }
+.section--narrow { max-width: 50rem; }
+.section--tint { max-width: none; background: var(--tint); }
+.section--tint > * { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 2.5rem 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.service { padding-top: 1.25rem; border-top: 3px solid var(--primary); }
+.service p { color: var(--muted); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.step { counter-increment: step; }
+.step::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--on-primary);
+  font: 600 1.3rem var(--serif);
+}
+.step p { color: var(--muted); }
+
+.faq { border-bottom: 1px solid var(--line); }
+.faq summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  font: 600 1.25rem var(--serif);
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--sans); color: var(--primary); }
+.faq[open] summary::after { content: "−"; }
+.faq p { color: var(--muted); padding-bottom: 1.25rem; }
+
+/* --- Contato ------------------------------------------------------------- */
+.contact {
+  display: grid;
+  gap: 3rem;
+  max-width: none;
+  background: var(--primary);
+  color: var(--on-primary);
+  padding-left: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
+  padding-right: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
+}
+.contact h2 { margin-bottom: 1.25rem; }
+.contact p { opacity: 0.9; }
+.contact__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.contact__info { display: grid; gap: 1.5rem; margin: 0; }
+.contact__info dt { font-size: 0.85rem; opacity: 0.75; }
+.contact__info dd { margin: 0.2rem 0 0; font-weight: 600; }
+@media (min-width: 52rem) {
+  .contact { grid-template-columns: 1.6fr 1fr; align-items: start; }
+}
+
+/* --- Rodapé -------------------------------------------------------------- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.75rem var(--gutter);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
